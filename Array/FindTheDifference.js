@@ -15,9 +15,7 @@ function findTheDifference(stringOne, stringTwo) {
     const s2 = stringTwo.split('');
     s1.sort((a,b) => a.charCodeAt(0) - b.charCodeAt(0));
     s2.sort((a,b) => a.charCodeAt(0) - b.charCodeAt(0));
-    let size = Math.min(s1.length, s2.length);
     let i=0, j=0;
-    let extraString;
     while(i< s1.length && j<s2.length) {
         if(s1[i] != s2[j]){
             return s2[j];
