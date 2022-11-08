@@ -15,8 +15,8 @@ function countSwaps(arr) {
             swapCount++;
             console.log(referenceArray[i]);
             let temp = referenceArray[i];
-            referenceArray[i] = referenceArray[referenceArray[i].index];
-            referenceArray[referenceArray[i].index] = temp;
+            referenceArray[i] = referenceArray[referenceArray[i].elem];
+            referenceArray[referenceArray[i].elem] = temp;
             i--;
         }
     }

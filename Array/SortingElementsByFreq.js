@@ -1,4 +1,4 @@
-const arr = [9,9,9,2,5]
+const arr = [2, 5, 2, 6, -1, 9999999, 5, 8, 8, 8]
 
 function sortingElementsByFreq(arr) {
     let elementCount = {};
@@ -16,9 +16,16 @@ function sortingElementsByFreq(arr) {
     }
     console.log(countArray);
     countArray.sort((a,b) => {
-        return (a.element - b.element) && (b.Count - a.Count)
+        return (b.Count - a.Count);
     })
-    console.log(countArray);
+    let result = []
+    for(let i=0; i<countArray.length; i++){
+        while(countArray[i].Count--){
+            result.push(countArray[i].element);
+        }
+    }
+
+    console.log(result);
 }
 
 sortingElementsByFreq(arr);
